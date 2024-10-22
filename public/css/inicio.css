@@ -1,0 +1,316 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+p.consulta-urna{
+    font-size: 20px;
+    color: wheat;
+    margin: 10px;
+}
+
+input[type="text"] {
+    width: calc(100%);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #0a0909;
+    border-radius: 5px;
+}
+
+button#buscarButton {
+    width: 55%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 48px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+main {
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: -42px;
+}
+
+.urna-container {
+    width: 55%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.urna {
+    z-index: 2;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #c2c2c2;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+/* lado*/
+.lado{
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #656563;
+    margin-left: 50px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Tela da urna */
+.tela {
+    width: 60%;
+    height: 90%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Teclado numérico */
+.teclado {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.botao1 {
+    width: 100%;
+    height: 150px;
+    background-color: #262626;
+    border: none;
+    border-radius: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+.baixo{
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background: linear-gradient(to top, #656563 50%,#262626 50% );
+}
+.botao2 {
+    width: 30%;
+    height: 50px;
+    background-color: #262626;
+    border: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    
+}
+.botao3 {
+    width: 40%;
+    height: 50px;
+    background-color: #656563;
+    border: none;
+    border-top-right-radius: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    
+}
+.botao4 {
+    width: 40%;
+    height: 50px;
+    background-color: #656563;
+    border: none;
+    border-top-left-radius: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    
+}
+
+
+.botao:hover {
+    background-color: #ccc;
+}
+
+/* Botões de ação */
+.botoes-acoes {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    padding: 10px;
+    align-items: end;
+}
+
+.botao-acao {
+    display: flex;
+    width: 30%;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    padding: 10px;
+}
+
+.botao-verde {
+    height: 80px;
+    margin-left: 10px;
+    background-color: #36AC61;
+    color:#333;
+}
+
+.botao-verde:hover {
+    background-color: #218838;
+}
+
+.botao-laranja {
+    height: 50px;
+    background-color: #E46A25;
+    color:#333;
+}
+
+.botao-laranja:hover {
+    background-color: #c25625;
+}
+
+.botao-branco {
+    height: 60px;
+    margin-right: 10px;
+    background-color: #DAD9D4;
+    color: #333;
+}
+
+.botao-branco:hover {
+    background-color: #f0f0f0;
+}
+
+div#abas.tabs {
+    display: flex !important;
+}
+
+.tabs {
+    display: flex; 
+    margin-top: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab {
+    flex: 1; /* Faz com que cada aba ocupe o mesmo espaço */
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-bottom: none; /* Remove a borda inferior para parecer uma aba */
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+
+.tab:hover, .tab-active {
+    background-color: #fff;
+    font-weight: bold;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Define a altura mínima como o tamanho da janela */
+}
+
+.content {
+    flex: 1; /* Faz o conteúdo crescer até o máximo possível */
+}
+
+
+/* Container do formulário */
+.contact-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.contact-container h2 {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.contact-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Inputs e textarea */
+.contact-container input[type="text"],
+.contact-container input[type="email"],
+.contact-container textarea {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 4px; /* Bordas arredondadas */
+    margin-bottom: 15px; /* Espaço entre campos */
+}
+
+/* Botão de envio */
+.contact-container input[type="submit"] {
+    background-color: #007bff; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+}
+
+.contact-container input[type="submit"]:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+/* Informações de contato */
+.contact-info {
+    margin-top: 20px; /* Espaço acima */
+}
+
